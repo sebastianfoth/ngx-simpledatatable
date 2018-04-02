@@ -1,4 +1,14 @@
-import {Directive, OnChanges, DoCheck, Input, Output, SimpleChange, EventEmitter, IterableDiffer, IterableDiffers} from "@angular/core";
+import {
+    Directive,
+    OnChanges,
+    DoCheck,
+    Input,
+    Output,
+    SimpleChange,
+    EventEmitter,
+    IterableDiffer,
+    IterableDiffers
+} from "@angular/core";
 import * as _ from "lodash";
 import {SortingOrder} from "../enums/sorting-order.enum";
 import {ReplaySubject} from "rxjs/ReplaySubject";
@@ -75,7 +85,7 @@ export class SimpleDataTableDirective implements OnChanges, DoCheck {
         return {sortBy: this.sortBy, sortOrder: this.sortOrder};
     }
 
-    public setSort(sortBy: string|string[], sortOrder: SortingOrder): void {
+    public setSort(sortBy: string | string[], sortOrder: SortingOrder): void {
         if (this.sortBy !== sortBy || this.sortOrder !== sortOrder) {
             this.sortBy = sortBy;
             this.sortOrder = ParamHelper.guardAndReturnSortingOrder(sortOrder);
