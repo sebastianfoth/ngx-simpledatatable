@@ -1,5 +1,5 @@
 export interface IPageEvent {
-    activePage: number;
+    currentPage: number;
     rowsOnPage: number;
     dataLength: number;
 }
