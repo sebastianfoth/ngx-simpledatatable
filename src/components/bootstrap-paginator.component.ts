@@ -1,9 +1,9 @@
 import {Component, Input, OnChanges} from "@angular/core";
-import * as _ from "lodash";
 import {SimpleDataTableDirective} from "../directives/simpledatatable.directive";
+import * as _ from "lodash";
 
 @Component({
-    selector: "mfBootstrapPaginator",
+    selector: "sfBootstrapPaginator",
     template: `
         <sfPaginator #p [sfTable]="sfTable">
             <ul class="pagination" *ngIf="p.dataLength > p.rowsOnPage">
