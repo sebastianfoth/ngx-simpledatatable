@@ -11,10 +11,10 @@ import {
 } from "@angular/core";
 import * as _ from "lodash";
 import {SortingOrder} from "../enums/sorting-order.enum";
-import {ReplaySubject} from "rxjs/ReplaySubject";
-import {ISortEvent} from "../interfaces/sort-event.interface";
-import {IPageEvent} from "../interfaces/page-event.interface";
+import {ISortEvent} from "..";
+import {IPageEvent} from "..";
 import {ParamHelper} from "../utils/param.helper.class";
+import {ReplaySubject} from "rxjs/internal/ReplaySubject";
 
 @Directive({
     selector: 'table[sfData]',
@@ -94,6 +94,14 @@ export class SimpleDataTableDirective implements OnChanges, DoCheck {
             this.sortByChange.emit(this.sortBy);
             this.sortOrderChange.emit(this.sortOrder);
         }
+    }
+
+    public getPageEvent(): IPageEvent {
+        return {
+            currentPage: this.currentPage,
+            rowsOnPage: this.rowsOnPage,
+            dataLength: this.inputData ? this.inputData.length : 0
+        };
     }
 
     public setPage(currentPage: number, rowsOnPage?: number): void {

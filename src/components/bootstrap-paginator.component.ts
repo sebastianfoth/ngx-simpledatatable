@@ -55,8 +55,8 @@ import * as _ from "lodash";
     `
 })
 export class BootstrapPaginator implements OnChanges {
-    @Input("rowsOnPageSet") rowsOnPageSet = [];
-    @Input("sfTable") sfTable: SimpleDataTableDirective;
+    @Input("rowsOnPageSet") public rowsOnPageSet = [];
+    @Input("sfTable") public sfTable: SimpleDataTableDirective;
 
     minRowsOnPage = 0;
 

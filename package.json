@@ -1,7 +1,8 @@
 {
   "name": "@sebastianfoth/ngx-simpledatatable",
-  "version": "0.0.1",
+  "version": "0.0.12",
   "description": "A simple bootstrap 4 datatable for Angular Framework",
+  "main": "dist/src/index.js",
   "license": "MIT",
   "keywords": [
     "angular",
@@ -16,22 +17,27 @@
     "sorting"
   ],
   "author": "ich@sebastianfoth.de",
-  "homepage": "https://github.com/sebastianfothde/ngx-simpledatatable",
+  "homepage": "https://github.com/sebastianfoth/ngx-simpledatatable",
   "bugs": {
-    "url": "https://github.com/sebastianfothde/ngx-simpledatatable/issues"
+    "url": "https://github.com/sebastianfoth/ngx-simpledatatable/issues"
   },
-  "scripts": {},
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "ngc -p src"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sebastianfothde/ngx-simpledatatable"
+    "url": "git+https://github.com/sebastianfoth/ngx-simpledatatable"
   },
   "devDependencies": {
-    "@angular/core": "^6.0.3",
-    "@angular/compiler": "^6.0.3",
     "@angular/common": "^6.0.3",
+    "@angular/compiler": "^6.0.3",
+    "@angular/compiler-cli": "^6.0.3",
+    "@angular/core": "^6.0.3",
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
-    "@angular/compiler-cli": "^6.0.3",
+    "@types/jasmine": "^2.8.6",
+    "@types/lodash": "^4.14.106",
     "http-server": "^0.11.1",
     "jasmine-core": "^2.8.0",
     "karma": "^2.0.0",
@@ -41,12 +47,10 @@
     "karma-phantomjs-launcher": "^1.0.4",
     "phantomjs-prebuilt": "^2.1.7",
     "remap-istanbul": "^0.10.1",
+    "rimraf": "^2.6.2",
     "rxjs": "^6.0.0",
     "typescript": "^2.7.2",
-    "zone.js": "^0.8.26",
-    "rimraf": "^2.6.2",
-    "@types/jasmine": "^2.8.6",
-    "@types/lodash": "^4.14.106"
+    "zone.js": "^0.8.26"
   },
   "dependencies": {
     "lodash": "^4.17.5"

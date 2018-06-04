@@ -1,16 +1,25 @@
 import {NgModule} from "@angular/core";
 import {CommonModule} from "@angular/common";
 import {SimpleDataTableDirective} from "./directives/simpledatatable.directive";
+import {BootstrapPaginator} from "./components/bootstrap-paginator.component";
+import {DefaultSorter} from "./components/default-sorter.component";
+import {Paginator} from "./components/paginator.component";
 
 @NgModule({
     imports: [
         CommonModule
     ],
     declarations: [
-        SimpleDataTableDirective
+        BootstrapPaginator,
+        SimpleDataTableDirective,
+        Paginator,
+        DefaultSorter
     ],
     exports: [
-        SimpleDataTableDirective
+        BootstrapPaginator,
+        SimpleDataTableDirective,
+        Paginator,
+        DefaultSorter
     ]
 })
 export class SimpleDataTableModule {
